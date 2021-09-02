@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# bradfordr
+# bradfordr (WIP)
 
 <!-- badges: start -->
 
@@ -11,7 +11,30 @@
 
 The goal of bradfordr is to implement probability functions from the
 Standardized Bradford Distribution in the same way other distributions
-are implemented in the `{stats}` package.
+are implemented in the `{stats}` package. It’s definition and
+functionality were taken from
+[SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html).
+
+## Definition of the Standardized Bradford Distribution
+
+A continuous random variable follows the Standardized Bradford
+Distribution if it’s probability density function is given as the
+following:
+
+$$
+f(x, c) = \\frac{c}{log(1 + c) \\cdot (1 + c \\cdot x)}
+$$
+
+For 0 ≤ *x* ≤ 1 and *c* &gt; 0.
+
+It comes primarily from [Bradford’s law of
+scattering](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html),
+which states that, if journals in a specific field are sorted into three
+groups (each with one third of all articles of that field), the number
+of journals in each group will be proportional to
+1 : *n* : *n*<sup>2</sup>. The Bradford Distribution itself is a special
+case of the Pareto Distribution, and has some relations with the
+Exponential Distribution.
 
 ## Installation
 
@@ -25,36 +48,53 @@ devtools::install_github("victordogo/bradfordr")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+`{bradfordr}` contains 4 basic functions, exemplified below:
+
+### rbradford
+
+The `rbradford` function generates a vector of values from the
+Standardized Bradford Distribution with length `n` and parameter `c`
+using the [Inverse Transform Sampling
+Method](https://en.wikipedia.org/wiki/Inverse_transform_sampling).
+
+The standard value for `c` is 5:
 
 ``` r
 library(bradfordr)
-## basic example code
+
+rbradford(n=10)
+#>  [1] 0.95592382 0.08050968 0.53551928 0.93816997 0.73389841 0.77676822
+#>  [7] 0.11582169 0.23469610 0.13045070 0.30300579
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+If the value of c is less or equal than 0, the function returns an
+error:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+rbradford(n=10, c=0)
+#> [1] "Error: c parameter must be greater than 0."
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
+These values can be used to plot a histogram, for an example:
 
-You can also embed plots, for example:
+``` r
+hist(rbradford(n=1000, c=10))
+```
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+## Meaning of logo
+
+> “I am Wan Shi Tong, he who knows ten thousand things, and you are
+> obviously humans; which, by the way, are no longer permitted in my
+> study.”
+
+Wan Shi Tong is a wise spirit from the popular acclaimed series “Avatar:
+The Last Airbender” and its sequel, “Avatar: The Legend of Korra”. In
+both series, its task is to guard and mantain the Spirit Library, in
+which almost all knowledge of the world is kept shut from dangerous and
+unwanted guests.
+
+Because the Bradford Distribution comes from a law that describes, in a
+kind of stretch, *knowledge and its distribution*, I figured that it
+would be nice to reference a series I love.
