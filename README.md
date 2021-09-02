@@ -21,9 +21,7 @@ A continuous random variable follows the Standardized Bradford
 Distribution if it’s probability density function is given as the
 following:
 
-$$
-f(x, c) = \\frac{c}{log(1 + c) \\cdot (1 + c \\cdot x)}
-$$
+$f(x, c) = \\frac{c}{log(1 + c) \\cdot (1 + c \\cdot x)}$
 
 For 0 ≤ *x* ≤ 1 and *c* &gt; 0.
 
@@ -63,8 +61,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.95592382 0.08050968 0.53551928 0.93816997 0.73389841 0.77676822
-#>  [7] 0.11582169 0.23469610 0.13045070 0.30300579
+#>  [1] 0.13603452 0.04263804 0.77614535 0.29056009 0.47465550 0.20250122
+#>  [7] 0.81178543 0.41315837 0.16937438 0.14707713
 ```
 
 If the value of c is less or equal than 0, the function returns an
