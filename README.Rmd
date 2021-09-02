@@ -27,9 +27,7 @@ The goal of bradfordr is to implement probability functions from the Standardize
 
 A continuous random variable follows the Standardized Bradford Distribution if it's probability density function is given as the following:
 
-$$
-f(x, c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}
-$$
+$f(x, c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}$
 
 For $0 \leq x \leq 1$ and $c > 0$.
 
