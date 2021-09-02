@@ -21,7 +21,7 @@ A continuous random variable follows the Standardized Bradford
 Distribution if it’s probability density function is given as the
 following:
 
-<img src="https://render.githubusercontent.com/render/math?math=f(x, c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}">
+<a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_cm&space;\LARGE&space;f(x;c)&space;=&space;\frac{c}{log(1&space;&plus;&space;c)&space;\cdot&space;(1&space;&plus;&space;c&space;\cdot&space;x)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_cm&space;\LARGE&space;f(x;c)&space;=&space;\frac{c}{log(1&space;&plus;&space;c)&space;\cdot&space;(1&space;&plus;&space;c&space;\cdot&space;x)}" title="\LARGE f(x;c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}" /></a>
 
 For 0 ≤ *x* ≤ 1 and *c* &gt; 0.
 
@@ -61,8 +61,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.15639477 0.02801319 0.88113648 0.21198971 0.35345796 0.07361113
-#>  [7] 0.69001332 0.33849371 0.61029498 0.04120930
+#>  [1] 0.26289643 0.07324243 0.23642474 0.02581323 0.72384486 0.20993432
+#>  [7] 0.20379770 0.20078451 0.11035517 0.14700230
 ```
 
 If the value of c is less or equal than 0, the function returns an
