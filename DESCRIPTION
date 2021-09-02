@@ -1,0 +1,17 @@
+Package: bradfordr
+Title: Probability Functions for the Standardized Bradford Distribution
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Victor",
+           family = "Dogo",
+           role = c("aut", "cre"),
+           email = "victordogo@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: The bradfordr package aims to implement probability and generating functions in the same scope as the stats package, but for the Bradford Distribution.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    stats

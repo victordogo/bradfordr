@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# bradfordr
+
+<!-- badges: start -->
+
+# bradfordr <img src='man/figures/logo.png' align="right" height="138" />
+
+<!-- badges: end -->
+
+The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the `{stats}` package.
+
+## Definition of the Standardized Bradford Distribution
+
+## Installation
+
+You can install the development version of bradfordr from [GitHub](github.com) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("victordogo/bradfordr")
+
+```
+
+## Example
+
+## Meaning of logo
+
+> "I am Wan Shi Tong, he who knows ten thousand things, and you are obviously humans; which, by the way, are no longer permitted in my study."
+
+
