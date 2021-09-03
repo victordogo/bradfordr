@@ -18,7 +18,7 @@ P(x<=X); otherwise, P(x > X).}
 \item{log.p}{logical; if TRUE, probabilities p are given as log(p)}
 }
 \value{
-a vector of \code{length(x)} with accumulated distribution probabilities.
+a vector of \code{length(q)} with accumulated distribution probabilities.
 }
 \description{
 This function returns probabilities from the accumulated distribution function

@@ -10,7 +10,7 @@
 #' P(x<=X); otherwise, P(x > X).
 #' @param log.p  logical; if TRUE, probabilities p are given as log(p)
 #'
-#' @return a vector of `length(x)` with accumulated distribution probabilities.
+#' @return a vector of `length(q)` with accumulated distribution probabilities.
 #' @export
 #'
 #' @examples pbradford(x=0.5, c=10)

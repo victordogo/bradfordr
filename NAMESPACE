@@ -2,4 +2,5 @@
 
 export(dbradford)
 export(pbradford)
+export(qbradford)
 export(rbradford)
