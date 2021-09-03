@@ -4,10 +4,10 @@
 \alias{pbradford}
 \title{pbradford}
 \usage{
-pbradford(x, c = 5, lower.tail = TRUE, log.p = FALSE)
+pbradford(q, c = 5, lower.tail = TRUE, log.p = FALSE)
 }
 \arguments{
-\item{x}{vector of quantiles. Must be between 0 and 1.}
+\item{q}{vector of quantiles. Must be between 0 and 1.}
 
 \item{c}{parameter of the standardized bradford distribution. Must be
 greater than 0.}

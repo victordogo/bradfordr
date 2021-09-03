@@ -3,7 +3,7 @@
 #' This function returns probabilities from the accumulated distribution function
 #' of the Bradford Distribution.
 #'
-#' @param x vector of quantiles. Must be between 0 and 1.
+#' @param q vector of quantiles. Must be between 0 and 1.
 #' @param c parameter of the standardized bradford distribution. Must be
 #' greater than 0.
 #' @param lower.tail logical; if TRUE (default), probabilities are given as
@@ -15,17 +15,17 @@
 #'
 #' @examples pbradford(x=0.5, c=10)
 #'
-pbradford = function(x, c=5, lower.tail=TRUE, log.p=FALSE){
+pbradford = function(q, c=5, lower.tail=TRUE, log.p=FALSE){
   if(c<=0){
     # Prints error
     print("Error: c parameter must be greater than 0.")
-  } else if ((x<0) || (x>1)){
+  } else if ((q<0) || (q>1)){
     # Also prints error
-      print("Error: x must be between 0 and 1.")
+      print("Error: q must be between 0 and 1.")
   } else {
     # Calculates probability accordingly
 
-    p <-  log(1+c*x)/log(1+c)
+    p <-  log(1+c*q)/log(1+c)
 
     if(lower.tail==TRUE){
       if(log.p==TRUE){
