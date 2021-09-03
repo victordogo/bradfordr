@@ -61,25 +61,60 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.26289643 0.07324243 0.23642474 0.02581323 0.72384486 0.20993432
-#>  [7] 0.20379770 0.20078451 0.11035517 0.14700230
+#>  [1] 0.03608248 0.09728425 0.50228193 0.01320755 0.84044013 0.44707345
+#>  [7] 0.23313962 0.13288689 0.85047314 0.64909279
 ```
 
-If the value of c is less or equal than 0, the function returns an
-error:
+If the value of c is less or equal than 0, the function returns an error
+(this is true to all functions in this package):
 
 ``` r
 rbradford(n=10, c=0)
 #> [1] "Error: c parameter must be greater than 0."
 ```
 
-These values can be used to plot a histogram, for an example:
+### pbradford
+
+The `pbradford` function returns the probabilities calculated from the
+accumulated distribution function of the Standardized Bradford
+Distribution:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;F(x;&space;c)&space;=&space;P(X&space;\leq&space;x)&space;=&space;\frac{log(1&space;&plus;&space;c&space;\cdot&space;x)}{log(1&plus;c)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;F(x;&space;c)&space;=&space;P(X&space;\leq&space;x)&space;=&space;\frac{log(1&space;&plus;&space;c&space;\cdot&space;x)}{log(1&plus;c)}" title="F(x; c) = P(X \leq x) = \frac{log(1 + c \cdot x)}{log(1+c)}" /></a>
+
+If `lower.tail=FALSE`, however, it returns 1 − *F*(*x*; *c*). It also
+has the option to return probabilities in the logarithmic scale.
 
 ``` r
-hist(rbradford(n=1000, c=10))
+# Calculating P(X <= 0.7) when c = 10
+
+pbradford(q=0.7,c=10)
+#> [1] 0.8671945
+
+# Now, calculating P(X > 0.7) when c = 10
+
+pbradford(q=0.7,c=10, lower.tail=FALSE)
+#> [1] 0.1328055
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+### dbradford
+
+The `dbradford` function gives the distribution’s pdf. By definition, we
+can’t really calculate probabilities like we do with discrete
+distributions (think like *P*(*X* = 10)), so this is the least useful
+function in the package.
+
+### qbradford
+
+The `qbradford` function gives the distribution’s quantile function.
+It’s useful for discovering what value would satisfy
+*P*(*X* ≤ *x*) = *p*. The same arguments from `pbradford` apply here.
+
+``` r
+# What value of x satisfies P(X <= x) = 0.8 when c=100?
+
+qbradford(p=0.8, c=100)
+#> [1] 0.3912889
+```
 
 ## Meaning of logo
 
