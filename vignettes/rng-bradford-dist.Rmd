@@ -75,31 +75,7 @@ hist(data)
 
 ```
 
-These differences can be seen better with the help of the other functions.
+These differences can be seen better with the help of the other functions. It's also possible to verify that graphically:
 
-## Checking the distribution of the numbers generated
+##
 
-Lastly, it's wise to check our generated data for any discrepancies regarding it's distribution; what if we do all this work but the values aren't really described by the Standardized Bradford Distribution?
-
-This can be checked using the [Kolmogorov-Smirnov Test](https://en.wikipedia.org/wiki/Kolmogorov-Smirnov_test) through the `stats::ks.test` function.
-
-Here, we have two hypothesis:
-
-1. $H_0:$ The values generated follow the Standardized Bradford Distribution with parameter `c`;
-2. $H_1:$ The values generated don't follow the Standardized Bradford Distribution with parameter `c`.
-
-```{r}
-
-# Generating data
-
-x <- rbradford(n=10000, c=10)
-
-# Checking distribution
-
-stats::ks.test(x, pbradford,c=10)
-
-```
-
-With a significance coefficient of 0.05, the p-value ($p > 0.05$) indicates that there aren't evidences supporting the alternate hypothesis $H_1$. Thus, it's somewhat safe to assume that, by failing to reject the null hypothesis $H_0$, the pseudo-random values generated follow the Standardized Bradford Distribution.
-
-This can also be verified graphically. To find a hint on how to do this, check the ["Studying the Standardized Bradford Distribution shape"](distribution-format.html) vignette.

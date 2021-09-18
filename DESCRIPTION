@@ -17,3 +17,7 @@ Imports:
     stats
 URL: https://github.com/victordogo/bradfordr
 BugReports: https://github.com/victordogo/bradfordr/issues
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
