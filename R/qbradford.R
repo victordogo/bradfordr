@@ -17,10 +17,10 @@
 qbradford <- function(p, c=5, lower.tail=TRUE, log.p=FALSE){
   if(c<=0){
     # Prints error
-    stop("Error: c parameter must be greater than 0.")
+    stop("c parameter must be greater than 0.")
   } else if ((p<0) || (p>1)){
     # Also prints error
-    stop("Error: p is a probability and must be between 0 and 1.")
+    stop("p is a probability and must be between 0 and 1.")
   } else {
     q <- ((1+c)^(p) - 1)/c
 
