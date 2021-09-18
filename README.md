@@ -1,8 +1,5 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# bradfordr (WIP)
-
 <!-- badges: start -->
 
 # bradfordr <img src='man/figures/logo.png' align="right" height="138" />
@@ -62,8 +59,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.18114065 0.29934294 0.95677695 0.60553909 0.90637572 0.11968920
-#>  [7] 0.94035876 0.05670329 0.15343582 0.01110642
+#>  [1] 0.01917047 0.43975562 0.25034811 0.90003604 0.24743379 0.44589014
+#>  [7] 0.35121257 0.62463851 0.48621821 0.45003653
 ```
 
 If the value of c is less or equal than 0, the function returns an error
