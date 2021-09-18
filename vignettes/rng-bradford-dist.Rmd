@@ -1,10 +1,10 @@
 ---
-title: "Generating Random Numbers from the Standardized Bradford Distribution with `bradfordr`"
+title: "Use the Standardized Bradford Distribution in R with `bradfordr`"
 author: "Victor Dogo"
 date: "Last updated in `r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Generating Random Numbers from the Standardized Bradford Distribution with `bradfordr`}
+  %\VignetteIndexEntry{Use the Standardized Bradford Distribution in R with `bradfordr`}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -77,5 +77,38 @@ hist(data)
 
 These differences can be seen better with the help of the other functions. It's also possible to verify that graphically:
 
-##
+## Verify distribution behavior graphically
 
+It's useful, for us, to visualize how the distribution's curve changes regarding the possible values of the `c` parameter. This can be done with `pbradford` (which defines the Cumulative Distribution Function), `dbradford` (which defines the Probability Density Function) and `qbradford` (which defines the Quantile Function). 
+
+In this vignette, I'll give an example with `pbradford`, which is the most useful function of the three mentioned above.
+
+```{r}
+# Behavior of cdf for c = 1, 10 and 100
+
+x <- seq(0,1,0.01)
+
+# Defining different values for the cdf based on c parameter
+y_c1 <- pbradford(x,c=1)
+y_c10 <- pbradford(x,c=10)
+y_c100 <- pbradford(x,c=100)
+
+# Plotting
+
+plot(x,y_c1,type="l",col="red",main="CDF of Bradford Dist.",ylab="Fx")
+lines(x,y_c10,col="blue")
+lines(x,y_c100,col="green")
+legend("bottomright",legend=c("c=1","c=10","c=100"),
+       lty = c(1,1,1),
+       col=c("red","blue","green"))
+
+
+```
+
+Here, we can see that, as `c` gets bigger, so does the weight to the right of the cdf. In other words, this means that small values of `x` applied to $F(x;c) = P(X \leq x)$ tend to give us bigger probabilities as `c` grows.
+
+This is true to all other functions as well: the size of the parameter `c` influences how much weight smaller values of $x$ have. 
+
+## Remarks
+
+This vignette is a WIP. Any suggestions are welcome here. I'm always finding better ways to write everything in this package, so comments help me a lot.

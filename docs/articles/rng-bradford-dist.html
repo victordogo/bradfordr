@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Generating Random Numbers from the Standardized Bradford Distribution with `bradfordr` • bradfordr</title>
+<title>Use the Standardized Bradford Distribution in R with `bradfordr` • bradfordr</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Generating Random Numbers from the Standardized Bradford Distribution with `bradfordr`">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Use the Standardized Bradford Distribution in R with `bradfordr`">
 <meta property="og:description" content="bradfordr">
 <meta property="og:image" content="https://victordogo.github.io/bradfordr/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -61,7 +61,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/rng-bradford-dist.html">Generating Random Numbers from the Standardized Bradford Distribution with `bradfordr`</a>
+      <a href="../articles/rng-bradford-dist.html">Use the Standardized Bradford Distribution in R with `bradfordr`</a>
     </li>
   </ul>
 </li>
@@ -86,7 +86,7 @@
       </header><script src="rng-bradford-dist_files/header-attrs-2.9/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Generating Random Numbers from the Standardized Bradford Distribution with <code>bradfordr</code>
+      <h1 data-toc-skip>Use the Standardized Bradford Distribution in R with <code>bradfordr</code>
 </h1>
                         <h4 class="author">Victor Dogo</h4>
             
@@ -134,7 +134,7 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.06538119 0.63817619 0.35420745 0.06442707 0.11315281 0.49774294</span></code></pre></div>
+<span class="co">#&gt; [1] 0.005755821 0.028430805 0.292709376 0.047001799 0.428686256 0.282863807</span></code></pre></div>
 <p>We can easily plot this data to understand how it behaves:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
@@ -149,8 +149,37 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
 <p>These differences can be seen better with the help of the other functions. It’s also possible to verify that graphically:</p>
 </div>
-<div id="section" class="section level2">
-<h2></h2>
+<div id="verify-distribution-behavior-graphically" class="section level2">
+<h2 class="hasAnchor">
+<a href="#verify-distribution-behavior-graphically" class="anchor"></a>Verify distribution behavior graphically</h2>
+<p>It’s useful, for us, to visualize how the distribution’s curve changes regarding the possible values of the <code>c</code> parameter. This can be done with <code>pbradford</code> (which defines the Cumulative Distribution Function), <code>dbradford</code> (which defines the Probability Density Function) and <code>qbradford</code> (which defines the Quantile Function).</p>
+<p>In this vignette, I’ll give an example with <code>pbradford</code>, which is the most useful function of the three mentioned above.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Behavior of cdf for c = 1, 10 and 100</span>
+
+<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0.01</span><span class="op">)</span>
+
+<span class="co"># Defining different values for the cdf based on c parameter</span>
+<span class="va">y_c1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">1</span><span class="op">)</span>
+<span class="va">y_c10</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
+<span class="va">y_c100</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">100</span><span class="op">)</span>
+
+<span class="co"># Plotting</span>
+
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c1</span>,type<span class="op">=</span><span class="st">"l"</span>,col<span class="op">=</span><span class="st">"red"</span>,main<span class="op">=</span><span class="st">"CDF of Bradford Dist."</span>,ylab<span class="op">=</span><span class="st">"Fx"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c10</span>,col<span class="op">=</span><span class="st">"blue"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c100</span>,col<span class="op">=</span><span class="st">"green"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="st">"bottomright"</span>,legend<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"c=1"</span>,<span class="st">"c=10"</span>,<span class="st">"c=100"</span><span class="op">)</span>,
+       lty <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>,
+       col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>,<span class="st">"blue"</span>,<span class="st">"green"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
+<p>Here, we can see that, as <code>c</code> gets bigger, so does the weight to the right of the cdf. In other words, this means that small values of <code>x</code> applied to <span class="math inline">\(F(x;c) = P(X \leq x)\)</span> tend to give us bigger probabilities as <code>c</code> grows.</p>
+<p>This is true to all other functions as well: the size of the parameter <code>c</code> influences how much weight smaller values of <span class="math inline">\(x\)</span> have.</p>
+</div>
+<div id="remarks" class="section level2">
+<h2 class="hasAnchor">
+<a href="#remarks" class="anchor"></a>Remarks</h2>
+<p>This vignette is a WIP. Any suggestions are welcome here. I’m always finding better ways to write everything in this package, so comments help me a lot.</p>
 </div>
   </div>
 
