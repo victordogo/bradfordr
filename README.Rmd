@@ -45,7 +45,7 @@ devtools::install_github("victordogo/bradfordr")
 
 ## Example
 
-`{bradfordr}` contains 4 basic functions, exemplified below:
+`{bradfordr}` contains 4 basic functions, exemplified below. More in depth applications can be seen in the vignettes of this package.
 
 ### rbradford
 
@@ -60,13 +60,7 @@ rbradford(n=10)
 
 ```
 
-If the value of c is less or equal than 0, the function returns an error (this is true to all functions in this package):
-
-```{r}
-
-rbradford(n=10, c=0)
-
-```
+If the value of c is less or equal than 0, the function returns an error (this is true to all functions in this package).
 
 ### pbradford
 
@@ -104,6 +98,11 @@ qbradford(p=0.8, c=100)
 
 
 ```
+
+## Acknowledgments
+
+* Many thanks to [Prof. Dr. Danilo Lourenço Lopes](http://lattes.cnpq.br/8061034473607951), who gave me the assignment to create functions for the Standardized Bradford Distribution and inadvertently inspired me to create this package;
+* A huge shoutout to all instructors at [curso-r.com](curso-r.com), specially [Beatriz Milz](https://beatrizmilz.com/) and [Caio C. Lente](https://lente.dev/) who taught the R Packages Course. It was great!
 
 ## Meaning of logo
 
