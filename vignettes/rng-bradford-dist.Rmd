@@ -1,0 +1,105 @@
+---
+title: "Generating Random Numbers from the Standardized Bradford Distribution with `bradfordr`"
+author: "Victor Dogo"
+date: "Last updated in `r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Generating Random Numbers from the Standardized Bradford Distribution with `bradfordr`}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(bradfordr)
+```
+
+The aim of `{bradfordr}`, initially, was to simply generate random numbers from the Standardized Bradford Distribution. It uses the **Inverse Sampling Method** to generate numbers from it:
+
+## The Inverse Transform Sampling Method
+
+The Inverse Transform Sampling Method is widely used to generate pseudo-random variables in cases where a specific distribution isn't available. It can be applied both computationally and analytically. 
+
+In short, this method consists in the following steps:
+
+1. A number $u$ between 0 and 1 is sampled from the $Uniform(0,1)$ distribution and interpreted as a **probability**;
+2. We take the distribution's **CDF** and equalize it to $u$. In our case, we have:
+
+$$
+u = F(x;c) = \frac{log(1 + cx)}{log(1+c)}
+$$
+
+3. The expression obtained is inverted; in other words, we manipulate the equation so that $x$ is isolated. In our case, we have:
+
+$$
+x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
+$$
+
+4. That's it! The $x$ value obtained is a pseudo-random number generated from the distribution of interest.
+
+A more in depth and technical definition can be seen in [Wikipedia](https://en.wikipedia.org/wiki/Inverse_transform_sampling).
+
+## Generating Numbers
+
+It's as easy as 1-2-3: just call the `rbradford` function with sample size `n` and parameter `c` (defaults to `c=5`):
+
+```{r}
+
+data <- rbradford(1000, c=10)
+
+head(data)
+
+```
+
+We can easily plot this data to understand how it behaves:
+
+```{r}
+
+hist(data)
+
+```
+
+With greater `c` values, comes a longer tail:
+
+```{r}
+
+data <- rbradford(1000, c=1000)
+
+hist(data)
+
+```
+
+These differences can be seen better with the help of the other functions.
+
+## Checking the distribution of the numbers generated
+
+Lastly, it's wise to check our generated data for any discrepancies regarding it's distribution; what if we do all this work but the values aren't really described by the Standardized Bradford Distribution?
+
+This can be checked using the [Kolmogorov-Smirnov Test](https://en.wikipedia.org/wiki/Kolmogorov-Smirnov_test) through the `stats::ks.test` function.
+
+Here, we have two hypothesis:
+
+1. $H_0:$ The values generated follow the Standardized Bradford Distribution with parameter `c`;
+2. $H_1:$ The values generated don't follow the Standardized Bradford Distribution with parameter `c`.
+
+```{r}
+
+# Generating data
+
+x <- rbradford(n=10000, c=10)
+
+# Checking distribution
+
+stats::ks.test(x, pbradford,c=10)
+
+```
+
+With a significance coefficient of 0.05, the p-value ($p > 0.05$) indicates that there aren't evidences supporting the alternate hypothesis $H_1$. Thus, it's somewhat safe to assume that, by failing to reject the null hypothesis $H_0$, the pseudo-random values generated follow the Standardized Bradford Distribution.
+
+This can also be verified graphically. To find a hint on how to do this, check the ["Studying the Standardized Bradford Distribution shape"](distribution-format.html) vignette.

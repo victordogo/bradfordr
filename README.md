@@ -62,8 +62,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.3758562 0.9863670 0.7478368 0.4940855 0.3749957 0.1229627 0.2154223
-#>  [8] 0.5747317 0.8028336 0.2210328
+#>  [1] 0.18114065 0.29934294 0.95677695 0.60553909 0.90637572 0.11968920
+#>  [7] 0.94035876 0.05670329 0.15343582 0.01110642
 ```
 
 If the value of c is less or equal than 0, the function returns an error
@@ -124,8 +124,9 @@ qbradford(p=0.8, c=100)
     Packages Course. It was great!;
 -   Also, many thanks to [Athos Damiani](https://github.com/athospd) and
     [Julio Trecenti](https://github.com/jtrecenti) who, in 2019, taught
-    a one-time mini course in R in which I’ve helped (to the best of my
-    abilities at that time, I was very shy). You can see that in [this
+    a one-time mini course in R in which I’ve helped as event committee
+    member (to the best of my abilities at that time, I was very shy).
+    They encouraged me a lot! You can see that in [this
     video](https://www.youtube.com/watch?v=Bv_6YeVihZc&t=8068s) (in
     portuguese).
 

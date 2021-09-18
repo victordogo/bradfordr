@@ -103,7 +103,7 @@ qbradford(p=0.8, c=100)
 
 * Many thanks to [Prof. Dr. Danilo Lourenço Lopes](http://lattes.cnpq.br/8061034473607951), who gave me the assignment to create functions for the Standardized Bradford Distribution and inadvertently inspired me to create this package;
 * A huge shoutout to all instructors at [curso-r.com](curso-r.com), specially [Beatriz Milz](https://github.com/beatrizmilz) and [Caio C. Lente](https://github.com/beatrizmilz) who taught the R Packages Course. It was great!;
-* Also, many thanks to  [Athos Damiani](https://github.com/athospd) and [Julio Trecenti](https://github.com/jtrecenti) who, in 2019, taught a one-time mini course in R in which I've helped (to the best of my abilities at that time, I was very shy). You can see that in [this video](https://www.youtube.com/watch?v=Bv_6YeVihZc&t=8068s) (in portuguese).
+* Also, many thanks to  [Athos Damiani](https://github.com/athospd) and [Julio Trecenti](https://github.com/jtrecenti) who, in 2019, taught a one-time mini course in R in which I've helped as event committee member (to the best of my abilities at that time, I was very shy). They encouraged me a lot! You can see that in [this video](https://www.youtube.com/watch?v=Bv_6YeVihZc&t=8068s) (in portuguese).
 
 ## Meaning of logo
 
