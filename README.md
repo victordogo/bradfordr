@@ -62,8 +62,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.90604193 0.99810302 0.03531583 0.02203937 0.58425370 0.06622974
-#>  [7] 0.30849246 0.64354297 0.35802813 0.44680192
+#>  [1] 0.3758562 0.9863670 0.7478368 0.4940855 0.3749957 0.1229627 0.2154223
+#>  [8] 0.5747317 0.8028336 0.2210328
 ```
 
 If the value of c is less or equal than 0, the function returns an error
@@ -119,9 +119,15 @@ qbradford(p=0.8, c=100)
     assignment to create functions for the Standardized Bradford
     Distribution and inadvertently inspired me to create this package;
 -   A huge shoutout to all instructors at [curso-r.com](curso-r.com),
-    specially [Beatriz Milz](https://beatrizmilz.com/) and [Caio C.
-    Lente](https://lente.dev/) who taught the R Packages Course. It was
-    great!
+    specially [Beatriz Milz](https://github.com/beatrizmilz) and
+    [Caio C. Lente](https://github.com/beatrizmilz) who taught the R
+    Packages Course. It was great!;
+-   Also, many thanks to [Athos Damiani](https://github.com/athospd) and
+    [Julio Trecenti](https://github.com/jtrecenti) who, in 2019, taught
+    a one-time mini course in R in which I’ve helped (to the best of my
+    abilities at that time, I was very shy). You can see that in [this
+    video](https://www.youtube.com/watch?v=Bv_6YeVihZc&t=8068s) (in
+    portuguese).
 
 ## Meaning of logo
 
