@@ -13,7 +13,7 @@
 #' @return a vector of `length(q)` with accumulated distribution probabilities.
 #' @export
 #'
-#' @examples pbradford(x=0.5, c=10)
+#' @examples pbradford(q=0.5, c=10)
 #'
 pbradford = function(q, c=5, lower.tail=TRUE, log.p=FALSE){
   if(c<=0){

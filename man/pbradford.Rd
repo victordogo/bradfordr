@@ -25,6 +25,6 @@ This function returns probabilities from the accumulated distribution function
 of the Bradford Distribution.
 }
 \examples{
-pbradford(x=0.5, c=10)
+pbradford(q=0.5, c=10)
 
 }
