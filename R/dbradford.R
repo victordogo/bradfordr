@@ -23,7 +23,7 @@ dbradford = function(x, c=5, log=FALSE){
 
   d = c/(log(1+c)*(1+c*x)) # Calculating density
 
-  if(d>1){d <- 1} # This is probably a temporary fix, d cant be bigger than 1
+  d[which(d>1)] <- 1 # Temporary fix, d must be smaller than 1
 
   if(log==FALSE){
     return(d)
