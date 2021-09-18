@@ -17,7 +17,7 @@
 #'
 rbradford = function (n, c=5){
   if(c <=0){
-    print("Error: c parameter must be greater than 0.")
+    stop("Error: c parameter must be greater than 0.")
     # this happens because of the own definition of the distribution
   } else {
 

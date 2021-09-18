@@ -15,10 +15,10 @@
 dbradford = function(x, c=5, log=FALSE){
   if(c <= 0){
     # Prints error
-    print("Error: c parameter must be greater than 0.")
+    stop("Error: c parameter must be greater than 0.")
   } else if (x<0 || x>1) {
     # Also prints error
-    print("Error: x must be between 0 and 1.")
+    stop("Error: x must be between 0 and 1.")
   } else{
 
   d = c/(log(1+c)*(1+c*x)) # Calculating density

@@ -18,10 +18,10 @@
 pbradford = function(q, c=5, lower.tail=TRUE, log.p=FALSE){
   if(c<=0){
     # Prints error
-    print("Error: c parameter must be greater than 0.")
+    stop("Error: c parameter must be greater than 0.")
   } else if ((q<0) || (q>1)){
     # Also prints error
-      print("Error: q must be between 0 and 1.")
+      stop("Error: q must be between 0 and 1.")
   } else {
     # Calculates probability accordingly
 
