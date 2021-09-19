@@ -17,6 +17,8 @@ knitr::opts_chunk$set(
 
 # bradfordr <img src='man/figures/logo.png' align="right" height="138" />
 
+[![pkgdown](https://github.com/victordogo/bradfordr/workflows/pkgdown/badge.svg)](https://github.com/victordogo/bradfordr/actions)
+[![check-release](https://github.com/victordogo/bradfordr/workflows/check-release/badge.svg)](https://github.com/victordogo/bradfordr/actions)
 <!-- badges: end -->
 
 The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the `{stats}` package. It's definition and functionality were taken from [SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html).

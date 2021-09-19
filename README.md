@@ -4,6 +4,8 @@
 
 # bradfordr <img src='man/figures/logo.png' align="right" height="138" />
 
+[![pkgdown](https://github.com/victordogo/bradfordr/workflows/pkgdown/badge.svg)](https://github.com/victordogo/bradfordr/actions)
+[![check-release](https://github.com/victordogo/bradfordr/workflows/check-release/badge.svg)](https://github.com/victordogo/bradfordr/actions)
 <!-- badges: end -->
 
 The goal of bradfordr is to implement probability functions from the
@@ -59,8 +61,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.01917047 0.43975562 0.25034811 0.90003604 0.24743379 0.44589014
-#>  [7] 0.35121257 0.62463851 0.48621821 0.45003653
+#>  [1] 0.60849746 0.89654655 0.96713865 0.03526403 0.03552219 0.22031577
+#>  [7] 0.44082245 0.22945828 0.08024803 0.81124538
 ```
 
 If the value of c is less or equal than 0, the function returns an error
