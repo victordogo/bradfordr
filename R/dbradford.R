@@ -16,7 +16,7 @@ dbradford = function(x, c=5, log=FALSE){
   if(c <= 0){
     # Prints error
     stop("c parameter must be greater than 0.")
-  } else if (x<0 || x>1) {
+  } else if (any(!dplyr::between(x,0,1))) {
     # Also prints error
     stop("x must be between 0 and 1.")
   } else{
