@@ -19,7 +19,7 @@ pbradford = function(q, c=5, lower.tail=TRUE, log.p=FALSE){
   if(c<=0){
     # Prints error
     stop("c parameter must be greater than 0.")
-  } else if ((q<0) || (q>1)){
+  } else if (any(!dplyr::between(q,0,1))){
     # Also prints error
       stop("q must be between 0 and 1.")
   } else {
