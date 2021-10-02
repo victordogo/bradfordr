@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the `{stats}` package. It's definition and functionality were taken from [SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html).
+The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the `{stats}` package. Its definition and functionality were taken from [SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html).
 
 ## Definition of the Standardized Bradford Distribution
 
@@ -30,7 +30,7 @@ A continuous random variable follows the Standardized Bradford Distribution if i
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_cm&space;\LARGE&space;f(x;c)&space;=&space;\frac{c}{log(1&space;&plus;&space;c)&space;\cdot&space;(1&space;&plus;&space;c&space;\cdot&space;x)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_cm&space;\LARGE&space;f(x;c)&space;=&space;\frac{c}{log(1&space;&plus;&space;c)&space;\cdot&space;(1&space;&plus;&space;c&space;\cdot&space;x)}" title="\LARGE f(x;c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}" /></a>
 
-For $0 \leq x \leq 1$ and $c > 0$.
+For 0 <= x <= 1 and c > 0.
 
 It comes primarily from [Bradford's law of scattering](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html), which states that, if journals in a specific field are sorted into three groups (each with one third of all articles of that field), the number of journals in each group will be proportional to $1:n:n^2$. The Bradford Distribution itself is a special case of the Pareto Distribution, and has some relations with the Exponential Distribution.
 

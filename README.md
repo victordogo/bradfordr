@@ -12,7 +12,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 The goal of bradfordr is to implement probability functions from the
 Standardized Bradford Distribution in the same way other distributions
-are implemented in the `{stats}` package. It’s definition and
+are implemented in the `{stats}` package. Its definition and
 functionality were taken from
 [SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html).
 
@@ -24,7 +24,7 @@ following:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_cm&space;\LARGE&space;f(x;c)&space;=&space;\frac{c}{log(1&space;&plus;&space;c)&space;\cdot&space;(1&space;&plus;&space;c&space;\cdot&space;x)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_cm&space;\LARGE&space;f(x;c)&space;=&space;\frac{c}{log(1&space;&plus;&space;c)&space;\cdot&space;(1&space;&plus;&space;c&space;\cdot&space;x)}" title="\LARGE f(x;c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}" /></a>
 
-For 0 ≤ *x* ≤ 1 and *c* &gt; 0.
+For 0 &lt;= x &lt;= 1 and c &gt; 0.
 
 It comes primarily from [Bradford’s law of
 scattering](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html),
@@ -63,8 +63,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.17968705 0.43695979 0.42117053 0.07429570 0.12363027 0.12878935
-#>  [7] 0.69705915 0.67894553 0.01527679 0.63221902
+#>  [1] 0.09326667 0.44317669 0.06576089 0.14751516 0.32830079 0.20542230
+#>  [7] 0.23347059 0.72454287 0.32804309 0.52689899
 ```
 
 If the value of c is less or equal than 0, the function returns an error
