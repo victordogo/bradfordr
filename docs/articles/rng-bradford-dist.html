@@ -90,7 +90,7 @@
 </h1>
                         <h4 class="author">Victor Dogo</h4>
             
-            <h4 class="date">Last updated in 2021-09-18</h4>
+            <h4 class="date">Last updated in 2021-10-02</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/victordogo/bradfordr/blob/master/vignettes/rng-bradford-dist.Rmd"><code>vignettes/rng-bradford-dist.Rmd</code></a></small>
       <div class="hidden name"><code>rng-bradford-dist.Rmd</code></div>
@@ -131,10 +131,10 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <p>It’s as easy as 1-2-3: just call the <code>rbradford</code> function with sample size <code>n</code> and parameter <code>c</code> (defaults to <code>c=5</code>):</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.005755821 0.028430805 0.292709376 0.047001799 0.428686256 0.282863807</span></code></pre></div>
+<span class="co">#&gt; [1] 0.08714592 0.01913665 0.10491826 0.04842849 0.22492380 0.46580685</span></code></pre></div>
 <p>We can easily plot this data to understand how it behaves:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
@@ -143,7 +143,7 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <p>With greater <code>c</code> values, comes a longer tail:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">1000</span><span class="op">)</span>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">1000</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
 <p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
@@ -160,9 +160,9 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0.01</span><span class="op">)</span>
 
 <span class="co"># Defining different values for the cdf based on c parameter</span>
-<span class="va">y_c1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">1</span><span class="op">)</span>
-<span class="va">y_c10</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
-<span class="va">y_c100</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">100</span><span class="op">)</span>
+<span class="va">y_c1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">1</span><span class="op">)</span>
+<span class="va">y_c10</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
+<span class="va">y_c100</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">100</span><span class="op">)</span>
 
 <span class="co"># Plotting</span>
 

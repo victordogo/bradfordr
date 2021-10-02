@@ -85,17 +85,11 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-
-<div id="bradfordr-wip" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#bradfordr-wip" class="anchor"></a>bradfordr (WIP)</h1></div>
-<!-- badges: start -->
-</div>
 <div id="bradfordr-" class="section level1">
-<h1 class="hasAnchor">
+<div class="page-header"><h1 class="hasAnchor">
 <a href="#bradfordr-" class="anchor"></a>bradfordr <img src="reference/figures/logo.png" align="right" height="138">
-</h1>
-<!-- badges: end -->
+</h1></div>
+
 <p>The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the <code>{stats}</code> package. It’s definition and functionality were taken from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html">SciPy</a>.</p>
 <div id="definition-of-the-standardized-bradford-distribution" class="section level2">
 <h2 class="hasAnchor">
@@ -125,9 +119,9 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/victordogo/bradfordr">bradfordr</a></span><span class="op">)</span>
 
-<span class="fu"><a href="reference/rbradford.html">rbradford</a></span><span class="op">(</span>n<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt;  [1] 0.18114065 0.29934294 0.95677695 0.60553909 0.90637572 0.11968920</span>
-<span class="co">#&gt;  [7] 0.94035876 0.05670329 0.15343582 0.01110642</span></code></pre></div>
+<span class="fu"><a href="reference/bradford.html">rbradford</a></span><span class="op">(</span>n<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
+<span class="co">#&gt;  [1] 0.31796601 0.42704728 0.44115053 0.30844039 0.28752928 0.30320392</span>
+<span class="co">#&gt;  [7] 0.08046147 0.48804569 0.17340587 0.02626150</span></code></pre></div>
 <p>If the value of c is less or equal than 0, the function returns an error (this is true to all functions in this package).</p>
 </div>
 <div id="pbradford" class="section level3">
@@ -139,12 +133,12 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Calculating P(X &lt;= 0.7) when c = 10</span>
 
-<span class="fu"><a href="reference/pbradford.html">pbradford</a></span><span class="op">(</span>q<span class="op">=</span><span class="fl">0.7</span>,c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
+<span class="fu"><a href="reference/bradford.html">pbradford</a></span><span class="op">(</span>q<span class="op">=</span><span class="fl">0.7</span>,c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt; [1] 0.8671945</span>
 
 <span class="co"># Now, calculating P(X &gt; 0.7) when c = 10</span>
 
-<span class="fu"><a href="reference/pbradford.html">pbradford</a></span><span class="op">(</span>q<span class="op">=</span><span class="fl">0.7</span>,c<span class="op">=</span><span class="fl">10</span>, lower.tail<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>
+<span class="fu"><a href="reference/bradford.html">pbradford</a></span><span class="op">(</span>q<span class="op">=</span><span class="fl">0.7</span>,c<span class="op">=</span><span class="fl">10</span>, lower.tail<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>
 <span class="co">#&gt; [1] 0.1328055</span></code></pre></div>
 </div>
 <div id="dbradford" class="section level3">
@@ -159,7 +153,7 @@
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># What value of x satisfies P(X &lt;= x) = 0.8 when c=100?</span>
 
-<span class="fu"><a href="reference/qbradford.html">qbradford</a></span><span class="op">(</span>p<span class="op">=</span><span class="fl">0.8</span>, c<span class="op">=</span><span class="fl">100</span><span class="op">)</span>
+<span class="fu"><a href="reference/bradford.html">qbradford</a></span><span class="op">(</span>p<span class="op">=</span><span class="fl">0.8</span>, c<span class="op">=</span><span class="fl">100</span><span class="op">)</span>
 <span class="co">#&gt; [1] 0.3912889</span></code></pre></div>
 </div>
 </div>
@@ -168,7 +162,7 @@
 <a href="#acknowledgments" class="anchor"></a>Acknowledgments</h2>
 <ul>
 <li>Many thanks to <a href="http://lattes.cnpq.br/8061034473607951">Prof. Dr. Danilo Lourenço Lopes</a>, who gave me the assignment to create functions for the Standardized Bradford Distribution and inadvertently inspired me to create this package;</li>
-<li>A huge shoutout to all instructors at <a href="curso-r.com">curso-r.com</a>, specially <a href="https://github.com/beatrizmilz">Beatriz Milz</a> and <a href="https://github.com/beatrizmilz">Caio C. Lente</a> who taught the R Packages Course. It was great!;</li>
+<li>A huge shoutout to all instructors at <a href="curso-r.com">curso-r.com</a>, specially <a href="https://github.com/beatrizmilz">Beatriz Milz</a> and <a href="https://github.com/clente">Caio Lente</a> who taught the R Packages Course. It was great!;</li>
 <li>Also, many thanks to <a href="https://github.com/athospd">Athos Damiani</a> and <a href="https://github.com/jtrecenti">Julio Trecenti</a> who, in 2019, taught a one-time mini course in R in which I’ve helped as event committee member (to the best of my abilities at that time, I was very shy). They encouraged me a lot! You can see that in <a href="https://www.youtube.com/watch?v=Bv_6YeVihZc&amp;t=8068s">this video</a> (in portuguese).</li>
 </ul>
 </div>
@@ -182,7 +176,6 @@
 <p>Because the Bradford Distribution comes from a law that describes, in a kind of stretch, <em>knowledge and its distribution</em>, I figured that it would be nice to reference a series I love.</p>
 </div>
 </div>
-
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -209,7 +202,15 @@
 </ul>
 </div>
 
-  </div>
+  <div class="dev-status">
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/victordogo/bradfordr/actions"><img src="https://github.com/victordogo/bradfordr/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
+<li><a href="https://github.com/victordogo/bradfordr/actions"><img src="https://github.com/victordogo/bradfordr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+</ul>
+</div>
+</div>
 </div>
 
 

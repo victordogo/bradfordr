@@ -6,6 +6,8 @@
 
 [![pkgdown](https://github.com/victordogo/bradfordr/workflows/pkgdown/badge.svg)](https://github.com/victordogo/bradfordr/actions)
 [![R-CMD-check](https://github.com/victordogo/bradfordr/workflows/R-CMD-check/badge.svg)](https://github.com/victordogo/bradfordr/actions)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The goal of bradfordr is to implement probability functions from the
@@ -61,8 +63,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.580131349 0.813027845 0.348226427 0.045228836 0.001209981 0.485849162
-#>  [7] 0.131886464 0.006243504 0.317923780 0.042822533
+#>  [1] 0.31796601 0.42704728 0.44115053 0.30844039 0.28752928 0.30320392
+#>  [7] 0.08046147 0.48804569 0.17340587 0.02626150
 ```
 
 If the value of c is less or equal than 0, the function returns an error
