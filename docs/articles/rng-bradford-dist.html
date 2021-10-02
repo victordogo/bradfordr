@@ -26,6 +26,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -38,18 +40,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bradfordr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -68,7 +64,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/victordogo/bradfordr/">
+  <a href="https://github.com/victordogo/bradfordr/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -88,11 +84,11 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Use the Standardized Bradford Distribution in R with <code>bradfordr</code>
 </h1>
-                        <h4 class="author">Victor Dogo</h4>
+                        <h4 data-toc-skip class="author">Victor Dogo</h4>
             
-            <h4 class="date">Last updated in 2021-10-02</h4>
+            <h4 data-toc-skip class="date">Last updated in 2021-10-02</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/victordogo/bradfordr/blob/master/vignettes/rng-bradford-dist.Rmd"><code>vignettes/rng-bradford-dist.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/victordogo/bradfordr/blob/master/vignettes/rng-bradford-dist.Rmd" class="external-link"><code>vignettes/rng-bradford-dist.Rmd</code></a></small>
       <div class="hidden name"><code>rng-bradford-dist.Rmd</code></div>
 
     </div>
@@ -100,11 +96,11 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/victordogo/bradfordr">bradfordr</a></span><span class="op">)</span></code></pre></div>
-<p>The aim of <a href="https://github.com/victordogo/bradfordr">bradfordr</a>, initially, was to simply generate random numbers from the Standardized Bradford Distribution. It uses the <strong>Inverse Sampling Method</strong> to generate numbers from it:</p>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/victordogo/bradfordr" class="external-link">bradfordr</a></span><span class="op">)</span></code></pre></div>
+<p>The aim of <a href="https://github.com/victordogo/bradfordr" class="external-link">bradfordr</a>, initially, was to simply generate random numbers from the Standardized Bradford Distribution. It uses the <strong>Inverse Sampling Method</strong> to generate numbers from it:</p>
 <div id="the-inverse-transform-sampling-method" class="section level2">
 <h2 class="hasAnchor">
-<a href="#the-inverse-transform-sampling-method" class="anchor"></a>The Inverse Transform Sampling Method</h2>
+<a href="#the-inverse-transform-sampling-method" class="anchor" aria-hidden="true"></a>The Inverse Transform Sampling Method</h2>
 <p>The Inverse Transform Sampling Method is widely used to generate pseudo-random variables in cases where a specific distribution isn’t available. It can be applied both computationally and analytically.</p>
 <p>In short, this method consists in the following steps:</p>
 <ol style="list-style-type: decimal">
@@ -123,41 +119,41 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <ol start="4" style="list-style-type: decimal">
 <li>That’s it! The <span class="math inline">\(x\)</span> value obtained is a pseudo-random number generated from the distribution of interest.</li>
 </ol>
-<p>A more in depth and technical definition can be seen in <a href="https://en.wikipedia.org/wiki/Inverse_transform_sampling">Wikipedia</a>.</p>
+<p>A more in depth and technical definition can be seen in <a href="https://en.wikipedia.org/wiki/Inverse_transform_sampling" class="external-link">Wikipedia</a>.</p>
 </div>
 <div id="generating-numbers" class="section level2">
 <h2 class="hasAnchor">
-<a href="#generating-numbers" class="anchor"></a>Generating Numbers</h2>
+<a href="#generating-numbers" class="anchor" aria-hidden="true"></a>Generating Numbers</h2>
 <p>It’s as easy as 1-2-3: just call the <code>rbradford</code> function with sample size <code>n</code> and parameter <code>c</code> (defaults to <code>c=5</code>):</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
 
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.04015427 0.02035772 0.33808969 0.05461808 0.23323999 0.79492371</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
+<span class="co">#&gt; [1] 0.8146082 0.0578095 0.8745855 0.1077132 0.7132845 0.2301817</span></code></pre></div>
 <p>We can easily plot this data to understand how it behaves:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
-<span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
 <p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-3-1.png" width="700"></p>
 <p>With greater <code>c</code> values, comes a longer tail:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">1000</span><span class="op">)</span>
 
-<span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
 <p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
 <p>These differences can be seen better with the help of the other functions. It’s also possible to verify that graphically:</p>
 </div>
 <div id="verify-distribution-behavior-graphically" class="section level2">
 <h2 class="hasAnchor">
-<a href="#verify-distribution-behavior-graphically" class="anchor"></a>Verify distribution behavior graphically</h2>
+<a href="#verify-distribution-behavior-graphically" class="anchor" aria-hidden="true"></a>Verify distribution behavior graphically</h2>
 <p>It’s useful, for us, to visualize how the distribution’s curve changes regarding the possible values of the <code>c</code> parameter. This can be done with <code>pbradford</code> (which defines the Cumulative Distribution Function), <code>dbradford</code> (which defines the Probability Density Function) and <code>qbradford</code> (which defines the Quantile Function).</p>
 <p>In this vignette, I’ll give an example with <code>pbradford</code>, which is the most useful function of the three mentioned above.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Behavior of cdf for c = 1, 10 and 100</span>
 
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0.01</span><span class="op">)</span>
+<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0.01</span><span class="op">)</span>
 
 <span class="co"># Defining different values for the cdf based on c parameter</span>
 <span class="va">y_c1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">1</span><span class="op">)</span>
@@ -166,19 +162,19 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 
 <span class="co"># Plotting</span>
 
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c1</span>,type<span class="op">=</span><span class="st">"l"</span>,col<span class="op">=</span><span class="st">"red"</span>,main<span class="op">=</span><span class="st">"CDF of Bradford Dist."</span>,ylab<span class="op">=</span><span class="st">"Fx"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c10</span>,col<span class="op">=</span><span class="st">"blue"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c100</span>,col<span class="op">=</span><span class="st">"green"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="st">"bottomright"</span>,legend<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"c=1"</span>,<span class="st">"c=10"</span>,<span class="st">"c=100"</span><span class="op">)</span>,
-       lty <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>,
-       col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>,<span class="st">"blue"</span>,<span class="st">"green"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c1</span>,type<span class="op">=</span><span class="st">"l"</span>,col<span class="op">=</span><span class="st">"red"</span>,main<span class="op">=</span><span class="st">"CDF of Bradford Dist."</span>,ylab<span class="op">=</span><span class="st">"Fx"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c10</span>,col<span class="op">=</span><span class="st">"blue"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y_c100</span>,col<span class="op">=</span><span class="st">"green"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/legend.html" class="external-link">legend</a></span><span class="op">(</span><span class="st">"bottomright"</span>,legend<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"c=1"</span>,<span class="st">"c=10"</span>,<span class="st">"c=100"</span><span class="op">)</span>,
+       lty <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>,
+       col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>,<span class="st">"blue"</span>,<span class="st">"green"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
 <p>Here, we can see that, as <code>c</code> gets bigger, so does the weight to the right of the cdf. In other words, this means that small values of <code>x</code> applied to <span class="math inline">\(F(x;c) = P(X \leq x)\)</span> tend to give us bigger probabilities as <code>c</code> grows.</p>
 <p>This is true to all other functions as well: the size of the parameter <code>c</code> influences how much weight smaller values of <span class="math inline">\(x\)</span> have.</p>
 </div>
 <div id="remarks" class="section level2">
 <h2 class="hasAnchor">
-<a href="#remarks" class="anchor"></a>Remarks</h2>
+<a href="#remarks" class="anchor" aria-hidden="true"></a>Remarks</h2>
 <p>This vignette is a WIP. Any suggestions are welcome here. I’m always finding better ways to write everything in this package, so comments help me a lot.</p>
 </div>
   </div>
@@ -194,11 +190,13 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 
 
       <footer><div class="copyright">
-  <p>Developed by Victor Dogo.</p>
+  <p></p>
+<p>Developed by Victor Dogo.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
       </footer>
@@ -206,6 +204,8 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 
   
 
+
+  
 
   </body>
 </html>

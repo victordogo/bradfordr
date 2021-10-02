@@ -26,6 +26,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -38,18 +40,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">bradfordr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -87,49 +83,49 @@
   <div class="contents col-md-9">
 <div id="bradfordr-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#bradfordr-" class="anchor"></a>bradfordr <img src="reference/figures/logo.png" align="right" height="138">
+<a href="#bradfordr-" class="anchor" aria-hidden="true"></a>bradfordr <img src="reference/figures/logo.png" align="right" height="138">
 </h1></div>
 
-<p>The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the <code>{stats}</code> package. It’s definition and functionality were taken from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html">SciPy</a>.</p>
+<p>The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the <code>{stats}</code> package. Itâs definition and functionality were taken from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html" class="external-link">SciPy</a>.</p>
 <div id="definition-of-the-standardized-bradford-distribution" class="section level2">
 <h2 class="hasAnchor">
-<a href="#definition-of-the-standardized-bradford-distribution" class="anchor"></a>Definition of the Standardized Bradford Distribution</h2>
-<p>A continuous random variable follows the Standardized Bradford Distribution if it’s probability density function is given as the following:</p>
-<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5Cbg_white&amp;space;%5Cfn_cm&amp;space;%5CLARGE&amp;space;f(x;c)&amp;space;=&amp;space;%5Cfrac%7Bc%7D%7Blog(1&amp;space;&amp;plus;&amp;space;c)&amp;space;%5Ccdot&amp;space;(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D" target="_blank"><img src="https://latex.codecogs.com/gif.latex?%5Cbg_white&amp;space;%5Cfn_cm&amp;space;%5CLARGE&amp;space;f(x;c)&amp;space;=&amp;space;%5Cfrac%7Bc%7D%7Blog(1&amp;space;&amp;plus;&amp;space;c)&amp;space;%5Ccdot&amp;space;(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D" title="\LARGE f(x;c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}"></a></p>
-<p>For 0 ≤ <em>x</em> ≤ 1 and <em>c</em> &gt; 0.</p>
-<p>It comes primarily from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html">Bradford’s law of scattering</a>, which states that, if journals in a specific field are sorted into three groups (each with one third of all articles of that field), the number of journals in each group will be proportional to 1 : <em>n</em> : <em>n</em><sup>2</sup>. The Bradford Distribution itself is a special case of the Pareto Distribution, and has some relations with the Exponential Distribution.</p>
+<a href="#definition-of-the-standardized-bradford-distribution" class="anchor" aria-hidden="true"></a>Definition of the Standardized Bradford Distribution</h2>
+<p>A continuous random variable follows the Standardized Bradford Distribution if itâs probability density function is given as the following:</p>
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5Cbg_white&amp;space;%5Cfn_cm&amp;space;%5CLARGE&amp;space;f(x;c)&amp;space;=&amp;space;%5Cfrac%7Bc%7D%7Blog(1&amp;space;&amp;plus;&amp;space;c)&amp;space;%5Ccdot&amp;space;(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D" target="_blank" class="external-link"><img src="https://latex.codecogs.com/gif.latex?%5Cbg_white&amp;space;%5Cfn_cm&amp;space;%5CLARGE&amp;space;f(x;c)&amp;space;=&amp;space;%5Cfrac%7Bc%7D%7Blog(1&amp;space;&amp;plus;&amp;space;c)&amp;space;%5Ccdot&amp;space;(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D" title="\LARGE f(x;c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}"></a></p>
+<p>For 0ââ¤â<em>x</em>ââ¤â1 and <em>c</em>â&gt;â0.</p>
+<p>It comes primarily from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html" class="external-link">Bradfordâs law of scattering</a>, which states that, if journals in a specific field are sorted into three groups (each with one third of all articles of that field), the number of journals in each group will be proportional to 1â:â<em>n</em>â:â<em>n</em><sup>2</sup>. The Bradford Distribution itself is a special case of the Pareto Distribution, and has some relations with the Exponential Distribution.</p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h2>
 <p>You can install the development version of bradfordr from <a href="github.com">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"victordogo/bradfordr"</span><span class="op">)</span></code></pre></div>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"victordogo/bradfordr"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
-<p><a href="https://github.com/victordogo/bradfordr">bradfordr</a> contains 4 basic functions, exemplified below. More in depth applications can be seen in the vignettes of this package.</p>
+<a href="#example" class="anchor" aria-hidden="true"></a>Example</h2>
+<p><a href="https://github.com/victordogo/bradfordr" class="external-link">bradfordr</a> contains 4 basic functions, exemplified below. More in depth applications can be seen in the vignettes of this package.</p>
 <div id="rbradford" class="section level3">
 <h3 class="hasAnchor">
-<a href="#rbradford" class="anchor"></a>rbradford</h3>
-<p>The <code>rbradford</code> function generates a vector of values from the Standardized Bradford Distribution with length <code>n</code> and parameter <code>c</code> using the <a href="https://en.wikipedia.org/wiki/Inverse_transform_sampling">Inverse Transform Sampling Method</a>.</p>
+<a href="#rbradford" class="anchor" aria-hidden="true"></a>rbradford</h3>
+<p>The <code>rbradford</code> function generates a vector of values from the Standardized Bradford Distribution with length <code>n</code> and parameter <code>c</code> using the <a href="https://en.wikipedia.org/wiki/Inverse_transform_sampling" class="external-link">Inverse Transform Sampling Method</a>.</p>
 <p>The standard value for <code>c</code> is 5:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/victordogo/bradfordr">bradfordr</a></span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/victordogo/bradfordr" class="external-link">bradfordr</a></span><span class="op">)</span>
 
 <span class="fu"><a href="reference/bradford.html">rbradford</a></span><span class="op">(</span>n<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt;  [1] 0.31796601 0.42704728 0.44115053 0.30844039 0.28752928 0.30320392</span>
-<span class="co">#&gt;  [7] 0.08046147 0.48804569 0.17340587 0.02626150</span></code></pre></div>
+<span class="co">#&gt;  [1] 0.96140531 0.12499598 0.76562824 0.01049923 0.12228598 0.12377033</span>
+<span class="co">#&gt;  [7] 0.11836122 0.11101673 0.02172411 0.96359812</span></code></pre></div>
 <p>If the value of c is less or equal than 0, the function returns an error (this is true to all functions in this package).</p>
 </div>
 <div id="pbradford" class="section level3">
 <h3 class="hasAnchor">
-<a href="#pbradford" class="anchor"></a>pbradford</h3>
+<a href="#pbradford" class="anchor" aria-hidden="true"></a>pbradford</h3>
 <p>The <code>pbradford</code> function returns the probabilities calculated from the accumulated distribution function of the Standardized Bradford Distribution:</p>
-<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5Cbg_white&amp;space;F(x;&amp;space;c)&amp;space;=&amp;space;P(X&amp;space;%5Cleq&amp;space;x)&amp;space;=&amp;space;%5Cfrac%7Blog(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D%7Blog(1&amp;plus;c)%7D" target="_blank"><img src="https://latex.codecogs.com/gif.latex?%5Cbg_white&amp;space;F(x;&amp;space;c)&amp;space;=&amp;space;P(X&amp;space;%5Cleq&amp;space;x)&amp;space;=&amp;space;%5Cfrac%7Blog(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D%7Blog(1&amp;plus;c)%7D" title="F(x; c) = P(X \leq x) = \frac{log(1 + c \cdot x)}{log(1+c)}"></a></p>
-<p>If <code>lower.tail=FALSE</code>, however, it returns 1 − <em>F</em>(<em>x</em>; <em>c</em>). It also has the option to return probabilities in the logarithmic scale.</p>
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5Cbg_white&amp;space;F(x;&amp;space;c)&amp;space;=&amp;space;P(X&amp;space;%5Cleq&amp;space;x)&amp;space;=&amp;space;%5Cfrac%7Blog(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D%7Blog(1&amp;plus;c)%7D" target="_blank" class="external-link"><img src="https://latex.codecogs.com/gif.latex?%5Cbg_white&amp;space;F(x;&amp;space;c)&amp;space;=&amp;space;P(X&amp;space;%5Cleq&amp;space;x)&amp;space;=&amp;space;%5Cfrac%7Blog(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D%7Blog(1&amp;plus;c)%7D" title="F(x; c) = P(X \leq x) = \frac{log(1 + c \cdot x)}{log(1+c)}"></a></p>
+<p>If <code>lower.tail=FALSE</code>, however, it returns 1âââ<em>F</em>(<em>x</em>;â<em>c</em>). It also has the option to return probabilities in the logarithmic scale.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Calculating P(X &lt;= 0.7) when c = 10</span>
 
@@ -143,13 +139,13 @@
 </div>
 <div id="dbradford" class="section level3">
 <h3 class="hasAnchor">
-<a href="#dbradford" class="anchor"></a>dbradford</h3>
-<p>The <code>dbradford</code> function gives the distribution’s pdf. By definition, we can’t really calculate probabilities like we do with discrete distributions (think like <em>P</em>(<em>X</em> = 10)), so this is the least useful function in the package.</p>
+<a href="#dbradford" class="anchor" aria-hidden="true"></a>dbradford</h3>
+<p>The <code>dbradford</code> function gives the distributionâs pdf. By definition, we canât really calculate probabilities like we do with discrete distributions (think like <em>P</em>(<em>X</em>â=â10)), so this is the least useful function in the package.</p>
 </div>
 <div id="qbradford" class="section level3">
 <h3 class="hasAnchor">
-<a href="#qbradford" class="anchor"></a>qbradford</h3>
-<p>The <code>qbradford</code> function gives the distribution’s quantile function. It’s useful for discovering what value would satisfy <em>P</em>(<em>X</em> ≤ <em>x</em>) = <em>p</em>. The same arguments from <code>pbradford</code> apply here.</p>
+<a href="#qbradford" class="anchor" aria-hidden="true"></a>qbradford</h3>
+<p>The <code>qbradford</code> function gives the distributionâs quantile function. Itâs useful for discovering what value would satisfy <em>P</em>(<em>X</em>ââ¤â<em>x</em>)â=â<em>p</em>. The same arguments from <code>pbradford</code> apply here.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># What value of x satisfies P(X &lt;= x) = 0.8 when c=100?</span>
 
@@ -159,20 +155,20 @@
 </div>
 <div id="acknowledgments" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acknowledgments" class="anchor"></a>Acknowledgments</h2>
+<a href="#acknowledgments" class="anchor" aria-hidden="true"></a>Acknowledgments</h2>
 <ul>
-<li>Many thanks to <a href="http://lattes.cnpq.br/8061034473607951">Prof. Dr. Danilo Lourenço Lopes</a>, who gave me the assignment to create functions for the Standardized Bradford Distribution and inadvertently inspired me to create this package;</li>
-<li>A huge shoutout to all instructors at <a href="curso-r.com">curso-r.com</a>, specially <a href="https://github.com/beatrizmilz">Beatriz Milz</a> and <a href="https://github.com/clente">Caio Lente</a> who taught the R Packages Course. It was great!;</li>
-<li>Also, many thanks to <a href="https://github.com/athospd">Athos Damiani</a> and <a href="https://github.com/jtrecenti">Julio Trecenti</a> who, in 2019, taught a one-time mini course in R in which I’ve helped as event committee member (to the best of my abilities at that time, I was very shy). They encouraged me a lot! You can see that in <a href="https://www.youtube.com/watch?v=Bv_6YeVihZc&amp;t=8068s">this video</a> (in portuguese).</li>
+<li>Many thanks to <a href="http://lattes.cnpq.br/8061034473607951" class="external-link">Prof.Â Dr.Â Danilo LourenÃ§o Lopes</a>, who gave me the assignment to create functions for the Standardized Bradford Distribution and inadvertently inspired me to create this package;</li>
+<li>A huge shoutout to all instructors at <a href="curso-r.com">curso-r.com</a>, specially <a href="https://github.com/beatrizmilz" class="external-link">Beatriz Milz</a> and <a href="https://github.com/clente" class="external-link">Caio Lente</a> who taught the R Packages Course. It was great!;</li>
+<li>Also, many thanks to <a href="https://github.com/athospd" class="external-link">Athos Damiani</a> and <a href="https://github.com/jtrecenti" class="external-link">Julio Trecenti</a> who, in 2019, taught a one-time mini course in R in which Iâve helped as event committee member (to the best of my abilities at that time, I was very shy). They encouraged me a lot! You can see that in <a href="https://www.youtube.com/watch?v=Bv_6YeVihZc&amp;t=8068s" class="external-link">this video</a> (in portuguese).</li>
 </ul>
 </div>
 <div id="meaning-of-logo" class="section level2">
 <h2 class="hasAnchor">
-<a href="#meaning-of-logo" class="anchor"></a>Meaning of logo</h2>
+<a href="#meaning-of-logo" class="anchor" aria-hidden="true"></a>Meaning of logo</h2>
 <blockquote>
-<p>“I am Wan Shi Tong, he who knows ten thousand things, and you are obviously humans; which, by the way, are no longer permitted in my study.”</p>
+<p>âI am Wan Shi Tong, he who knows ten thousand things, and you are obviously humans; which, by the way, are no longer permitted in my study.â</p>
 </blockquote>
-<p>Wan Shi Tong is a wise spirit from the popular acclaimed series “Avatar: The Last Airbender” and its sequel, “Avatar: The Legend of Korra”. In both series, its task is to guard and mantain the Spirit Library, in which almost all knowledge of the world is kept shut from dangerous and unwanted guests.</p>
+<p>Wan Shi Tong is a wise spirit from the popular acclaimed series âAvatar: The Last Airbenderâ and its sequel, âAvatar: The Legend of Korraâ. In both series, its task is to guard and mantain the Spirit Library, in which almost all knowledge of the world is kept shut from dangerous and unwanted guests.</p>
 <p>Because the Bradford Distribution comes from a law that describes, in a kind of stretch, <em>knowledge and its distribution</em>, I figured that it would be nice to reference a series I love.</p>
 </div>
 </div>
@@ -180,7 +176,7 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li>Browse source code at <br><a href="https://github.com/victordogo/bradfordr/">https://​github.com/​victordogo/​bradfordr/​</a>
 </li>
@@ -188,38 +184,44 @@
 </li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
 <li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Victor Dogo <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/victordogo/bradfordr/actions"><img src="https://github.com/victordogo/bradfordr/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
-<li><a href="https://github.com/victordogo/bradfordr/actions"><img src="https://github.com/victordogo/bradfordr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://github.com/victordogo/bradfordr/actions" class="external-link"><img src="https://github.com/victordogo/bradfordr/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
+<li><a href="https://github.com/victordogo/bradfordr/actions" class="external-link"><img src="https://github.com/victordogo/bradfordr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Victor Dogo.</p>
+  <p></p>
+<p>Developed by Victor Dogo.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
       </footer>
@@ -227,6 +229,8 @@
 
   
 
+
+  
 
   </body>
 </html>

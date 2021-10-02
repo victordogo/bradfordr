@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://victordogo.github.io/bradfordr//index.html</loc>
+    <loc>https://victordogo.github.io/bradfordr/404.html</loc>
   </url>
   <url>
-    <loc>https://victordogo.github.io/bradfordr//reference/bradford.html</loc>
+    <loc>https://victordogo.github.io/bradfordr/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://victordogo.github.io/bradfordr//articles/rng-bradford-dist.html</loc>
+    <loc>https://victordogo.github.io/bradfordr/articles/rng-bradford-dist.html</loc>
+  </url>
+  <url>
+    <loc>https://victordogo.github.io/bradfordr/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://victordogo.github.io/bradfordr/index.html</loc>
+  </url>
+  <url>
+    <loc>https://victordogo.github.io/bradfordr/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://victordogo.github.io/bradfordr/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://victordogo.github.io/bradfordr/reference/bradford.html</loc>
+  </url>
+  <url>
+    <loc>https://victordogo.github.io/bradfordr/reference/index.html</loc>
   </url>
 </urlset>
