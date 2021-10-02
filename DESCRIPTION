@@ -16,7 +16,7 @@ RoxygenNote: 7.1.2
 Imports: 
     dplyr,
     stats
-URL: https://github.com/victordogo/bradfordr
+URL: https://victordogo.github.io/bradfordr
 BugReports: https://github.com/victordogo/bradfordr/issues
 Suggests: 
     rmarkdown,
