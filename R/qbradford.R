@@ -11,6 +11,7 @@
 #' @param log.p  logical; if TRUE, probabilities p are given as log(p)
 #'
 #' @return a vector of `length(p)` with the distribution quantiles.
+#'
 #' @export
 #'
 #' @examples qbradford(p=0.5, c=13)
