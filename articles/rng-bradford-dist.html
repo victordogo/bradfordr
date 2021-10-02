@@ -90,7 +90,7 @@
 </h1>
                         <h4 class="author">Victor Dogo</h4>
             
-            <h4 class="date">Last updated in 2021-09-19</h4>
+            <h4 class="date">Last updated in 2021-10-02</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/victordogo/bradfordr/blob/master/vignettes/rng-bradford-dist.Rmd"><code>vignettes/rng-bradford-dist.Rmd</code></a></small>
       <div class="hidden name"><code>rng-bradford-dist.Rmd</code></div>
@@ -130,17 +130,20 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <a href="#generating-numbers" class="anchor"></a>Generating Numbers</h2>
 <p>It’s as easy as 1-2-3: just call the <code>rbradford</code> function with sample size <code>n</code> and parameter <code>c</code> (defaults to <code>c=5</code>):</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
+<code class="sourceCode R">
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.45387202 0.51819626 0.06921732 0.44055909 0.03777027 0.13190694</span></code></pre></div>
+<span class="co">#&gt; [1] 0.36547672 0.13138593 0.07531710 0.61163447 0.29745728 0.06903949</span></code></pre></div>
 <p>We can easily plot this data to understand how it behaves:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R">
+<span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
 <p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-3-1.png" width="700"></p>
 <p>With greater <code>c</code> values, comes a longer tail:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">1000</span><span class="op">)</span>
+<code class="sourceCode R">
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">1000</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
 <p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
