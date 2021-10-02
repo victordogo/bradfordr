@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   rng-bradford-dist: rng-bradford-dist.html
-last_built: 2021-10-02T16:43Z
+last_built: 2021-10-02T17:01Z
 urls:
   reference: https://victordogo.github.io/bradfordr//reference
   article: https://victordogo.github.io/bradfordr//articles
