@@ -90,13 +90,13 @@
 <a href="#bradfordr-" class="anchor"></a>bradfordr <img src="reference/figures/logo.png" align="right" height="138">
 </h1></div>
 
-<p>The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the <code>{stats}</code> package. It’s definition and functionality were taken from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html">SciPy</a>.</p>
+<p>The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the <code>{stats}</code> package. Its definition and functionality were taken from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html">SciPy</a>.</p>
 <div id="definition-of-the-standardized-bradford-distribution" class="section level2">
 <h2 class="hasAnchor">
 <a href="#definition-of-the-standardized-bradford-distribution" class="anchor"></a>Definition of the Standardized Bradford Distribution</h2>
 <p>A continuous random variable follows the Standardized Bradford Distribution if it’s probability density function is given as the following:</p>
 <p><a href="https://www.codecogs.com/eqnedit.php?latex=%5Cbg_white&amp;space;%5Cfn_cm&amp;space;%5CLARGE&amp;space;f(x;c)&amp;space;=&amp;space;%5Cfrac%7Bc%7D%7Blog(1&amp;space;&amp;plus;&amp;space;c)&amp;space;%5Ccdot&amp;space;(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D" target="_blank"><img src="https://latex.codecogs.com/gif.latex?%5Cbg_white&amp;space;%5Cfn_cm&amp;space;%5CLARGE&amp;space;f(x;c)&amp;space;=&amp;space;%5Cfrac%7Bc%7D%7Blog(1&amp;space;&amp;plus;&amp;space;c)&amp;space;%5Ccdot&amp;space;(1&amp;space;&amp;plus;&amp;space;c&amp;space;%5Ccdot&amp;space;x)%7D" title="\LARGE f(x;c) = \frac{c}{log(1 + c) \cdot (1 + c \cdot x)}"></a></p>
-<p>For 0 ≤ <em>x</em> ≤ 1 and <em>c</em> &gt; 0.</p>
+<p>For 0 &lt;= x &lt;= 1 and c &gt; 0.</p>
 <p>It comes primarily from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html">Bradford’s law of scattering</a>, which states that, if journals in a specific field are sorted into three groups (each with one third of all articles of that field), the number of journals in each group will be proportional to 1 : <em>n</em> : <em>n</em><sup>2</sup>. The Bradford Distribution itself is a special case of the Pareto Distribution, and has some relations with the Exponential Distribution.</p>
 </div>
 <div id="installation" class="section level2">
@@ -120,8 +120,8 @@
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/victordogo/bradfordr">bradfordr</a></span><span class="op">)</span>
 
 <span class="fu"><a href="reference/bradford.html">rbradford</a></span><span class="op">(</span>n<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt;  [1] 0.96140531 0.12499598 0.76562824 0.01049923 0.12228598 0.12377033</span>
-<span class="co">#&gt;  [7] 0.11836122 0.11101673 0.02172411 0.96359812</span></code></pre></div>
+<span class="co">#&gt;  [1] 0.09326667 0.44317669 0.06576089 0.14751516 0.32830079 0.20542230</span>
+<span class="co">#&gt;  [7] 0.23347059 0.72454287 0.32804309 0.52689899</span></code></pre></div>
 <p>If the value of c is less or equal than 0, the function returns an error (this is true to all functions in this package).</p>
 </div>
 <div id="pbradford" class="section level3">
