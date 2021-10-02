@@ -5,7 +5,7 @@
 # bradfordr <img src='man/figures/logo.png' align="right" height="138" />
 
 [![pkgdown](https://github.com/victordogo/bradfordr/workflows/pkgdown/badge.svg)](https://github.com/victordogo/bradfordr/actions)
-[![check-release](https://github.com/victordogo/bradfordr/workflows/check-release/badge.svg)](https://github.com/victordogo/bradfordr/actions)
+[![R-CMD-check](https://github.com/victordogo/bradfordr/workflows/R-CMD-check/badge.svg)](https://github.com/victordogo/bradfordr/actions)
 <!-- badges: end -->
 
 The goal of bradfordr is to implement probability functions from the
@@ -61,8 +61,8 @@ The standard value for `c` is 5:
 library(bradfordr)
 
 rbradford(n=10)
-#>  [1] 0.60849746 0.89654655 0.96713865 0.03526403 0.03552219 0.22031577
-#>  [7] 0.44082245 0.22945828 0.08024803 0.81124538
+#>  [1] 0.580131349 0.813027845 0.348226427 0.045228836 0.001209981 0.485849162
+#>  [7] 0.131886464 0.006243504 0.317923780 0.042822533
 ```
 
 If the value of c is less or equal than 0, the function returns an error
@@ -118,9 +118,9 @@ qbradford(p=0.8, c=100)
     assignment to create functions for the Standardized Bradford
     Distribution and inadvertently inspired me to create this package;
 -   A huge shoutout to all instructors at [curso-r.com](curso-r.com),
-    specially [Beatriz Milz](https://github.com/beatrizmilz) and
-    [Caio C. Lente](https://github.com/beatrizmilz) who taught the R
-    Packages Course. It was great!;
+    specially [Beatriz Milz](https://github.com/beatrizmilz) and [Caio
+    Lente](https://github.com/clente) who taught the R Packages Course.
+    It was great!;
 -   Also, many thanks to [Athos Damiani](https://github.com/athospd) and
     [Julio Trecenti](https://github.com/jtrecenti) who, in 2019, taught
     a one-time mini course in R in which I’ve helped as event committee

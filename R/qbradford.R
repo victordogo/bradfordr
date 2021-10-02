@@ -14,6 +14,7 @@
 #' @export
 #'
 #' @examples qbradford(p=0.5, c=13)
+#'
 qbradford <- function(p, c=5, lower.tail=TRUE, log.p=FALSE){
   if(c<=0){
     # Prints error

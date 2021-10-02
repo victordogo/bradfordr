@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 # bradfordr <img src='man/figures/logo.png' align="right" height="138" />
 
 [![pkgdown](https://github.com/victordogo/bradfordr/workflows/pkgdown/badge.svg)](https://github.com/victordogo/bradfordr/actions)
-[![check-release](https://github.com/victordogo/bradfordr/workflows/check-release/badge.svg)](https://github.com/victordogo/bradfordr/actions)
+[![R-CMD-check](https://github.com/victordogo/bradfordr/workflows/R-CMD-check/badge.svg)](https://github.com/victordogo/bradfordr/actions)
 <!-- badges: end -->
 
 The goal of bradfordr is to implement probability functions from the Standardized Bradford Distribution in the same way other distributions are implemented in the `{stats}` package. It's definition and functionality were taken from [SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bradford.html).
@@ -102,7 +102,7 @@ qbradford(p=0.8, c=100)
 ## Acknowledgments
 
 * Many thanks to [Prof. Dr. Danilo Lourenço Lopes](http://lattes.cnpq.br/8061034473607951), who gave me the assignment to create functions for the Standardized Bradford Distribution and inadvertently inspired me to create this package;
-* A huge shoutout to all instructors at [curso-r.com](curso-r.com), specially [Beatriz Milz](https://github.com/beatrizmilz) and [Caio C. Lente](https://github.com/beatrizmilz) who taught the R Packages Course. It was great!;
+* A huge shoutout to all instructors at [curso-r.com](curso-r.com), specially [Beatriz Milz](https://github.com/beatrizmilz) and [Caio Lente](https://github.com/clente) who taught the R Packages Course. It was great!;
 * Also, many thanks to  [Athos Damiani](https://github.com/athospd) and [Julio Trecenti](https://github.com/jtrecenti) who, in 2019, taught a one-time mini course in R in which I've helped as event committee member (to the best of my abilities at that time, I was very shy). They encouraged me a lot! You can see that in [this video](https://www.youtube.com/watch?v=Bv_6YeVihZc&t=8068s) (in portuguese).
 
 ## Meaning of logo

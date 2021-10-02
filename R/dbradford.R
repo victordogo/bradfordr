@@ -12,6 +12,7 @@
 #' @export
 #'
 #' @examples dbradford(x=0.375, c=100)
+#'
 dbradford = function(x, c=5, log=FALSE){
   if(c <= 0){
     # Prints error
