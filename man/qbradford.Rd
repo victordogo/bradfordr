@@ -26,4 +26,5 @@ Bradford Distribution.
 }
 \examples{
 qbradford(p=0.5, c=13)
+
 }

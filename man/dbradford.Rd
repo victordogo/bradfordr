@@ -22,4 +22,5 @@ This function returns the distribution of the Standardized Bradford Distribution
 }
 \examples{
 dbradford(x=0.375, c=100)
+
 }
