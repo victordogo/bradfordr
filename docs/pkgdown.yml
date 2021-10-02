@@ -3,7 +3,7 @@ pkgdown: 1.9000.9000.9000
 pkgdown_sha: abfef4909fd93760c0cc2478d280ed594226cb95
 articles:
   rng-bradford-dist: rng-bradford-dist.html
-last_built: 2021-10-02T19:14Z
+last_built: 2021-10-02T19:37Z
 urls:
   reference: https://victordogo.github.io/bradfordr/reference
   article: https://victordogo.github.io/bradfordr/articles
