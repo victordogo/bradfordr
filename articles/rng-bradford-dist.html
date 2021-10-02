@@ -131,10 +131,10 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <p>It’s as easy as 1-2-3: just call the <code>rbradford</code> function with sample size <code>n</code> and parameter <code>c</code> (defaults to <code>c=5</code>):</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.20074538 0.06206324 0.21422672 0.59010489 0.13790269 0.36023662</span></code></pre></div>
+<span class="co">#&gt; [1] 0.99222270 0.01258643 0.27485564 0.16384905 0.65044016 0.24663520</span></code></pre></div>
 <p>We can easily plot this data to understand how it behaves:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
@@ -143,7 +143,7 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <p>With greater <code>c</code> values, comes a longer tail:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rbradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">1000</span><span class="op">)</span>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">rbradford</a></span><span class="op">(</span><span class="fl">1000</span>, c<span class="op">=</span><span class="fl">1000</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
 <p><img src="rng-bradford-dist_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
@@ -160,9 +160,9 @@ x = F^{-1}(u;c) = \frac{(1+c)^u - 1}{c}
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0.01</span><span class="op">)</span>
 
 <span class="co"># Defining different values for the cdf based on c parameter</span>
-<span class="va">y_c1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">1</span><span class="op">)</span>
-<span class="va">y_c10</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
-<span class="va">y_c100</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pbradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">100</span><span class="op">)</span>
+<span class="va">y_c1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">1</span><span class="op">)</span>
+<span class="va">y_c10</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">10</span><span class="op">)</span>
+<span class="va">y_c100</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bradford.html">pbradford</a></span><span class="op">(</span><span class="va">x</span>,c<span class="op">=</span><span class="fl">100</span><span class="op">)</span>
 
 <span class="co"># Plotting</span>
 
